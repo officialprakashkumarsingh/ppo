@@ -1,11 +1,11 @@
 import pygame
 import random
-import sys
+import time
 
 # Initialize Pygame
 pygame.init()
 
-# Constants
+# Constants for the game
 WIDTH = 800
 HEIGHT = 600
 GRID_SIZE = 20
@@ -13,10 +13,10 @@ GRID_WIDTH = WIDTH // GRID_SIZE
 GRID_HEIGHT = HEIGHT // GRID_SIZE
 
 # Colors
-BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
 
 # Snake class
 class Snake:
@@ -76,7 +76,7 @@ def main():
     clock = pygame.time.Clock()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption('Snake Game')
-    font = pygame.font.Font(None, 36)
+    font = pygame.font.SysFont('arial', 25)
 
     snake = Snake()
     food = Food()
@@ -86,7 +86,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                sys.exit()
+                return
             elif event.type == pygame.KEYDOWN:
                 if game_over:
                     if event.key == pygame.K_r:
@@ -117,9 +117,9 @@ def main():
         else:
             game_over_text = font.render('Game Over! Press R to Restart', True, WHITE)
             screen.blit(game_over_text, (WIDTH//2 - 150, HEIGHT//2))
-
+        
         pygame.display.update()
-        clock.tick(10)  # Control game speed
+        clock.tick(10)
 
 if __name__ == '__main__':
     main()

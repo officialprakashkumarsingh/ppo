@@ -1,30 +1,56 @@
 # Snake Game
 
-A classic Snake game implemented in Python using Pygame.
+Welcome to the Snake Game project! This is a classic Snake game implemented in Python using the Pygame library. The game features a snake that grows longer as it eats food, with the objective of achieving the highest score possible without colliding with the snake's own body.
+
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [How to Play](#how-to-play)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [License](#license)
+
+## Overview
+This project contains a simple yet engaging implementation of the Snake game. The snake moves around a grid, eats food to grow, and the game ends if the snake collides with itself. The player can restart the game after a game over.
 
 ## Installation
-1. Ensure you have Python installed on your system.
-2. Install Pygame if you haven't already:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/officialprakashkumarsingh/ppo.git
+   cd ppo
    ```
+
+2. **Install Dependencies**:
+   Ensure you have Python 3.x installed. Then, install the required Pygame library:
+   ```bash
    pip install pygame
    ```
-3. Clone this repository or download the `snake_game.py` file.
 
-## How to Play
-1. Run the game by executing:
-   ```
+3. **Run the Game**:
+   Execute the main game script:
+   ```bash
    python snake_game.py
    ```
-2. Use the arrow keys to control the snake's direction.
-3. Eat the red food to grow longer and increase your score.
-4. Avoid colliding with yourself. If you do, the game ends.
-5. Press 'R' to restart after game over.
+
+## How to Play
+- Use the **arrow keys** (Up, Down, Left, Right) to control the direction of the snake.
+- Guide the snake to eat the red food blocks to grow longer and increase your score.
+- Avoid colliding with the snake's own body, as this will end the game.
+- When the game is over, press **R** to restart.
 
 ## Features
-- Simple and intuitive controls.
-- Score tracking.
-- Game over and restart functionality.
+- Simple and intuitive controls using arrow keys.
+- Score tracking based on the number of food items eaten.
+- Game over detection with a restart option.
+- Wrap-around mechanics (snake reappears on the opposite side when it hits the edge).
 
-## Requirements
-- Python 3.x
-- Pygame library
+## Dependencies
+- **Python 3.x**: The programming language used for this project.
+- **Pygame**: A library for creating 2D video games in Python. Install it via `pip install pygame`.
+
+## License
+This project is open-source and available under the MIT License. Feel free to use, modify, and distribute the code as per the license terms.
+
+---
+
+Happy gaming! If you have any questions or suggestions, feel free to open an issue or contribute to the project.
